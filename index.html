@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <meta charset="UTF-8">
+<head>
+    <title>Kişisel Bilgi Formu</title>
+    <head>
+        
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+    
+            h2 {
+                color: #d60d0d;
+                text-align: center;
+            }
+    
+            form {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 20px;
+                width: 400px;
+                margin: 0 auto;
+            }
+    
+            label {
+                display: block;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+    
+            input[type="text"],
+            input[type="email"],
+            input[type="date"] {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+            }
+    
+            input[type="submit"] {
+                background-color: #4CAF50;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                
+            }
+    
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+    
+            .required-label::before {
+                content: "*";
+                color: red;
+                display: inline-block;
+                margin-right: 5px;
+            }
+            body {
+            font-family: Arial, sans-serif;
+            background-image: url('img/bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 20px;
+        }
+        .reference-group {
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.reference-group h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.reference-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.reference-group input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.form-group select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+        
+        </style>
+    </head>
+<body>
+    <h2>Kişisel Bilgi Formu</h2>
+    <form action="kayit.php" method="POST">
+        <label for="ad">Ad *</label>
+        <input type="text" name="ad" id="ad" required>
+
+        <label for="soyad">Soyad *</label>
+        <input type="text" name="soyad" id="soyad" required>
+
+        <label for="telefon">Telefon Numarası *</label>
+        <input type="text" name="telefon" id="telefon" required>
+
+        <label for="adres">Adres</label>
+        <input type="text" name="adres" id="adres">
+
+        <label for="email">E-posta *</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="ev_telefonu">Ev Telefonu</label>
+        <input type="text" name="ev_telefonu" id="ev_telefonu">
+
+        <label for="cinsiyet">Cinsiyet</label>
+        <input type="radio" name="cinsiyet" value="Erkek">Erkek
+        <input type="radio" name="cinsiyet" value="Kadın">Kadın
+        
+        <label for="uyruk">Uyruğu</label>
+        <input type="text" name="uyruk" id="uyruk">
+
+        <label for="dogum_yeri">Doğum Yeri</label>
+        <input type="text" name="dogum_yeri" id="dogum_yeri">
+
+        <label for="dogum_tarihi">Doğum Tarihi *</label>
+        <input type="date" name="dogum_tarihi" id="dogum_tarihi" required>
+
+        <label for="medeni_durum">Medeni Durumu</label>
+        <input type="radio" name="medeni_durum" value="Evli">Evli
+        <input type="radio" name="medeni_durum" value="Bekar">Bekar
+
+        <label for="ehliyet_durumu">Ehliyet Durumu *</label>
+        <input type="radio" name="ehliyet_durumu" value="Var" required>Var
+        <input type="radio" name="ehliyet_durumu" value="Yok">Yok
+
+        <label for="askerlik_durumu">Askerlik Durumu </label>
+        <input type="radio" name="askerlik_durumu" value="Yaptı" required>Yaptı
+        <input type="radio" name="askerlik_durumu" value="Yapmadı">Yapmadı
+        <div class="form-group">
+            <label for="yabanci_dil">Yabancı Dil Seviyesi</label>
+            <select name="yabanci_dil" id="yabanci_dil">
+                <option value="">Seçiniz</option>
+                <option value="Başlangıç">Başlangıç</option>
+                <option value="Orta">Orta</option>
+                <option value="İleri">İleri</option>
+            </select>
+        </div>
+
+
+            <h3>Referans Bilgileri</h3>
+            <div class="reference-group">
+                <label for="referans_ad">Ad</label>
+                <input type="text" name="referans_ad" id="referans_ad">
+            </div>
+            
+            <div class="reference-group">
+                <label for="referans_isyeri">İş Yeri</label>
+                <input type="text" name="referans_isyeri" id="referans_isyeri">
+            </div>
+            
+            <div class="reference-group">
+                <label for="referans_telefon">Telefon Numarası</label>
+                <input type="text" name="referans_telefon" id="referans_telefon">
+            </div>
+            
+            <div class="reference-group">
+                <label for="referans_pozisyon">Pozisyon</label>
+                <input type="text" name="referans_pozisyon" id="referans_pozisyon">
+            </div>
+           
+
+        <input type="submit" value="Kaydet">
+    </form>
+</body>
+</html>
