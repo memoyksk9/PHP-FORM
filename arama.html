@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kişileri Arama</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+            
+        }
+        h3 {
+            color: #d60d0d;
+            text-align: center;
+            z-index: 1;
+        }
+        h2 {
+            color: #d60d0d;
+            text-align: center;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('img/bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Kişileri Arama</h2>
+    <form action="arama.php" method="POST">
+        <label for="ad">Ad</label>
+        <input type="text" name="ad" id="ad">
+
+        <label for="soyad">Soyad</label>
+        <input type="text" name="soyad" id="soyad">
+
+        <label for="email">E-posta</label>
+        <input type="email" name="email" id="email">
+
+        <label for="telefon">Telefon Numarası</label>
+        <input type="text" name="telefon" id="telefon">
+
+        <label for="dogum_tarihi">Doğum Tarihi</label>
+        <input type="date" name="dogum_tarihi" id="dogum_tarihi">
+
+        <label for="yabanci_dil">Yabancı Dil Seviyesi</label>
+        <select name="yabanci_dil" id="yabanci_dil">
+            <option value="">Seçiniz</option>
+            <option value="Başlangıç">Başlangıç</option>
+            <option value="Orta">Orta</option>
+            <option value="İleri">İleri</option>
+        </select>
+
+        <label for="askerlik_durumu">Askerlik Durumu</label>
+        <select name="askerlik_durumu" id="askerlik_durumu">
+            <option value="">Seçiniz</option>
+            <option value="Yaptı">Yaptı</option>
+            <option value="Yapmadı">Yapmadı</option>
+        </select>
+
+        <input type="submit" value="Ara">
+    </form>
+</body>
+</html>
